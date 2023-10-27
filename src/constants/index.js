@@ -14,15 +14,19 @@ import {
   mongodb,
   git,
   figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  php,
+  clock,
   threejs,
+  salon,
+  nucamp,
+  video1,
+  video2,
+  video3,
+  video4,
+  video5,
+  video6,
+  video7,
+  video8,
 } from "../assets";
 
 const navLinks = [
@@ -50,7 +54,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "PHP Developer",
     icon: backend,
   },
   {
@@ -109,31 +113,31 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "php",
+    icon: php,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Front End Programmer Consultant",
+    company_name: "Potawatomi Training (contracted through Robert Half International)",
+    icon: javascript,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "2022 - 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Collaborated with Instructional Systems Designers (ISDs) to create SCORM compliant lessons delivered through a Learning Management System (LMS).",
+      "Collaborated effectively with managers, artists, animators, and sound engineers to develop web applications, ensuring that all elements were integrated seamlessly and met project requirements.",
+      "Flexibly work in a fast-paced, dynamic environment,.where priorities and deadlines may change.",
+      "Problem-solved both independently and as part of a team, leveraging my knowledge of JavaScript, Github, JSON, and CSS to identify and resolve technical issues quickly and efficiently.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Web Developer",
+    company_name: "Francisca Ordega Foundation",
+    icon: reactjs,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "2018 - 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -143,123 +147,128 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "House Of Hoops. Inc.",
+    icon: php,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "2008 - 2014",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining web applications using Javascript, jQuery, PHP and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers.",
+      "Ensured responsive design and cross-browser compatibility.",
+      "Contributed to code reviews for continuous improvement",
     ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Next Clock App",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A simple clock application made with React, Next.js and React-VFX",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "nextjs",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "react-vfx",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: clock,
+    source_code_link: "https://github.com/gdpickett/simple-clock",
+    view_link: "https://simple-clock-beryl.vercel.app/"
   },
   {
-    name: "Job IT",
+    name: "Salon 2 Bomb",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "tailwindcss",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "redux",
         color: "pink-text-gradient",
       },
+      {
+        name: "typescript",
+        color: "orange-text-gradient",
+      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: salon,
+    source_code_link: "https://github.com/gdpickett/s2b",
+    view_link: "https://www.salon2bomb.com"
+  },
+  {
+    name: "Campsite Directory",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AMAZON EC2",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "node.js",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: nucamp,
+    view_link: "http://3.138.189.31/home"
   },
 ];
 
-export { navLinks, services, technologies, experiences, testimonials, projects };
+const sampleVideos = [
+  {
+    name: "Work Sample 1",
+    url: video1,
+  },
+  {
+    name: "Work Sample 2",
+    url: video2,
+  },
+  {
+    name: "Work Sample 3",
+    url: video3,
+  },
+  {
+    name: "Work Sample 4",
+    url: video4,
+  },
+  {
+    name: "Work Sample 5",
+    url: video5,
+  },
+  {
+    name: "Work Sample 6",
+    url: video6,
+  },
+  {
+    name: "Work Sample 7",
+    url: video7,
+  },
+  {
+    name: "Work Sample 8",
+    url: video8,
+  },
+]
+
+export { navLinks, services, technologies, experiences, projects, sampleVideos };

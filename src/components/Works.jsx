@@ -2,14 +2,21 @@ import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import PropType from 'prop-types';
 import { styles } from '../styles';
-import { github } from '../assets';
+import { github, webclick } from '../assets';
 import { SectionWrapper } from './hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ProjectCard = ({index, name, description, tags, image, source_code}) => {
-  return(
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75 )}>
+const handleClick = (link)=>{
+    console.log("Link clicked",link);
+    window.open(link, '_blank');
+};
+
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, view_link }) => {
+  
+  //console.log('source_code',source_code_link);
+  return (
+    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
       <Tilt
         options={{
           max: 45,
@@ -19,27 +26,50 @@ const ProjectCard = ({index, name, description, tags, image, source_code}) => {
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
-          <img src={image} alt={`project_${name}`} className="w-full h-full object-cover rounded-2xl" />
-          <div className="absolute inset-0 flex justify-end m-3 card-image_hover">
-            <div 
-              onClick={()=>
-                window.open(source_code, '_blank')
-              }
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-              <img src={github} alt='github' className="w-1/2 h-1/2 object-contain" />
-            </div>
-          </div>
+          
+        <img src={image} alt={`project_${name}`} className="w-full h-full object-cover rounded-2xl" />
+          {
+            source_code_link && (
+              <div className="absolute inset-0 flex justify-end m-3 card-image_hover">
+                <div 
+                  onClick={()=>
+                    window.open(source_code_link, '_blank')
+                  }
+                  /*onClick={()=>handleClick(source_code_link)}*/
+                  className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+                  <img src={github} alt='github' className="w-1/2 h-1/2 object-contain" />
+                </div>
+              </div>
+            )
+          }
+          {
+            view_link && !source_code_link ? (
+              <>
+              <div className="absolute inset-0 flex justify-end m-3 card-image_hover">
+                <div
+                  /*onClick={() =>
+                    window.open(view_link, '_blank')
+                  }*/
+                  onClick={()=>handleClick(view_link)}
+                  className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+                  <img src={webclick} alt='website' className="w-1/2 h-1/2 object-contain" />
+                </div>
+              </div>
+              </>
+            ) : null
+          }
         </div>
         <div className="mt-5">
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag)=>(
+          {tags.map((tag) => (
             <p key={tag.name} className={`text-14[px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
+          
         </div>
       </Tilt>
     </motion.div>
@@ -52,7 +82,8 @@ ProjectCard.propTypes = {
   description: PropType.string,
   tags: PropType.array,
   image: PropType.string,
-  source_code: PropType.string
+  source_code_link: PropType.string,
+  view_link: PropType.string,
 }
 
 const Works = () => {
@@ -69,21 +100,21 @@ const Works = () => {
 
       <div className="w-full flex">
         <motion.p
-          variants={fadeIn('','', 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[5]' 
+          variants={fadeIn('', '', 0.1, 1)}
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[5]'
         >
-        Here is a collection of projects that I have made.
+          Here is a collection of projects that I have made.
         </motion.p>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index)=>{
-          return(
-          <ProjectCard
-            key={`project-${index}`}
-            index={index}
-            {...project}
-          />
+        {projects.map((project, index) => {
+          return (
+            <ProjectCard
+              key={`project-${index}`}
+              index={index}
+              {...project}
+            />
           )
         })}
       </div>
