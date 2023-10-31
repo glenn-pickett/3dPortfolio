@@ -186,7 +186,7 @@ const projects = [
   {
     name: "Salon 2 Bomb",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables users to communicate through a social media style platform. Currently in beta",
     tags: [
       {
         name: "nextjs",
@@ -212,7 +212,7 @@ const projects = [
   {
     name: "Campsite Directory",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive campsite platform that allows users to browse activities at different campsites.",
     tags: [
       {
         name: "react",
