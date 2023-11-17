@@ -27,6 +27,8 @@ import {
   video6,
   video7,
   video8,
+  dashboard,
+  portfolio,
 } from "../assets";
 
 const navLinks = [
@@ -233,6 +235,66 @@ const projects = [
     ],
     image: nucamp,
     view_link: "http://3.138.189.31/home"
+  },
+  {
+    name: "Dashboard",
+    description:
+      "A comprehensive frontend centered demonstration including a wide variety of charts and other business oriented content in a semi-customizable dashboard ",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "SyncFusion",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Context Hook",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: dashboard,
+    source_code_link: "https://github.com/glenn-pickett/dashboard",
+    view_link: "https://dashboard-one-wine.vercel.app/"
+  },
+  {
+    name: "3D Portfolio",
+    description:
+      "The page you are currently viewing, created with React, Vite, TailwindCSS, Threejs, Framer-Motion and ReactVFX",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Framer-Motion",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React-VFX",
+        color: "green-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/glenn-pickett/3dPortfolio",
+    view_link: "https://dashboard-one-wine.vercel.app/"
   },
 ];
 

@@ -35,6 +35,8 @@ import computerBg from "./Glenn-Pickett-_-Portfolio-Trans.png";
 import clock from "./Clock-App.jpg";
 import salon from "./Salon-2-Bomb.jpg";
 import nucamp from "./React-App.jpg";
+import dashboard from './Dashboard.png';
+import portfolio from './Portfolio.png';
 import webclick from "./webclick.png";
 
 import video1 from "./videos/video1.mp4";
@@ -72,6 +74,8 @@ export {
   clock,
   salon,
   nucamp,
+  dashboard,
+  portfolio,
   webclick,
   video1,
   video2,
