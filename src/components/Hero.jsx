@@ -27,7 +27,7 @@ const Hero = () => {
 
     return () => {
       console.log('isMobile remove', isMobile);
-      //setIsMobile(mediaQuery);
+      setIsMobile(mediaQuery);
       mediaQuery.removeEventListener('change', handleMediaQueryChange);
     }
   }, [isMobile]);
